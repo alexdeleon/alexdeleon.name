@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html class="no-js full">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>{{ page.title }}</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?subset=latin-ext&amp;family=Roboto%3A100%2C300%2C400%2C500">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?subset=latin-ext&amp;family=Exo%3A200%7CExo">
+
+
+    <!-- build:css({app,.tmp}) /css/main.css -->
+    <link href="/_bower_components/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/_bower_components/normalize-css/normalize.css">
+    <link rel="stylesheet" href="/css/syntax.css">
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/_bower_components/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/_bower_components/openwebicons/css/openwebicons-bootstrap.css" />
+    <!-- endbuild -->
+
+    <!-- build:js(app) /js/head-scripts.js -->
+    <!-- Replace with a custom modernizer build for production -->
+    <script src="/_bower_components/modernizr/modernizr.js"></script>
+    <!-- endbuild -->
+
+  </head>
+  <body>
+    <!--[if lt IE 8]>
+        <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+    <div class="content">
+        {% include navigation.html %}
+        <div class="main">
+        {{ content }}
+        </div>
+    </div>
+    {% include footer.html %}
+    {% include scripts.html %}
+    {% include googleanalytics.html %}
+
+  </body>
+</html>
