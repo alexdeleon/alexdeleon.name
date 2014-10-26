@@ -380,7 +380,7 @@ module.exports = function (grunt) {
     'jekyll:check',
     'compass:server',
     'jshint:all',
-    'csslint:check'
+    //'csslint:check'
   ]);
 
   grunt.registerTask('build', [
