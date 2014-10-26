@@ -252,9 +252,7 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            '_bower_components/jquery/jquery.js',
-            '_bower_components/bootstrap/dist/js/bootstrap.min.js',
-            '_bower_components/bootstrap/dist/css/bootstrap.min.css',
+            '_bower_components/**/*',
             'favicon.ico',
             'apple-touch*.png'
           ],
