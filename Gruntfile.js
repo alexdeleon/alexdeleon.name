@@ -13,6 +13,7 @@ module.exports = function (grunt) {
   require('time-grunt')(grunt);
   // Load all Grunt tasks
   require('load-grunt-tasks')(grunt);
+  grunt.loadNpmTasks('grunt-bower');
 
   grunt.initConfig({
     // Configurable paths
@@ -252,7 +253,9 @@ module.exports = function (grunt) {
             // Like Jekyll, exclude files & folders prefixed with an underscore.
             '!**/_*{,/**}',
             // Explicitly add any files your site needs for distribution here.
-            '_bower_components/**/*',
+            '_bower_components/jquery/jquery.js',
+            '_bower_components/bootstrap/dist/js/bootstrap.min.js',
+            '_bower_components/bootstrap/dist/css/bootstrap.min.css',
             'favicon.ico',
             'apple-touch*.png'
           ],
@@ -327,6 +330,21 @@ module.exports = function (grunt) {
         'compass:dist',
         'copy:dist'
       ]
+    },
+    bower: {
+      dist: {
+        dest: '<%= yeoman.dist %>',
+        options: {
+          ignorePackages: ['jquery', 'bootstrap', 'normalize-css', 'modernizr'],
+          packageSpecific: {
+            openwebicons: {
+              files: [
+                'font/**'
+              ]
+            }
+          }
+        }
+      }
     }
   });
 
@@ -373,6 +391,7 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
+    'bower:dist',
     'cssmin',
     'uglify',
     'imagemin',
