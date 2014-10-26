@@ -391,14 +391,14 @@ module.exports = function (grunt) {
     'useminPrepare',
     'concat',
     'autoprefixer:dist',
-    'bower:dist',
     'cssmin',
     'uglify',
     'imagemin',
     'svgmin',
     'filerev',
     'usemin',
-    'htmlmin'
+    'htmlmin',
+    'bower:dist'
     ]);
 
   grunt.registerTask('deploy', [
